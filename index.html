@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca-Es">
+  <head>
+    <meta charset="utf-8">
+    <title>test google spreadsheet to array</title>
+    <style>
+      table{
+        border-collapse: collapse;
+        border:1px solid #ccc;
+        display: none;
+      }
+      table td{
+        border: 1px solid #ccc;
+        width:1%;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="sheet2array.js"></script>
+    <script>
+
+    	$(document).ready(function() {
+		    $.getJSON("https://spreadsheets.google.com/feeds/cells/0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc/od6/public/basic?alt=json-in-script&callback=?", null, function(results){
+
+          $("<table id='content'></table><div id='chart_div' style='width:40%;height:400px;'></div>").appendTo("body"); 
+
+          var matrix = sheet2array.get(results);
+          for(var i=0;i<matrix.length;i++){
+            $("<tr></tr>").appendTo("#content");
+            if(matrix[i]){
+              for(var k=0,y=matrix[i].length;k<y;k++){
+                $("<td>"+(matrix[i][k] && matrix[i][k].value?matrix[i][k].value:"&nbsp;")+"</td>").appendTo("#content tr:last");
+              }
+            }
+          }          
+          $("#content").css('display','block');
+
+        });
+      });
+
+    </script>
+
+  </head>
+  <body style="font-family:verdana;font-size:.8em">
+
+  </body>
+</html>
