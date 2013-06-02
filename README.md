@@ -24,7 +24,7 @@ Google SpreadSheet JSON to 2-dimension Array
 			}
 		}  	
 
-4. Sample [Google Spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc)<br /><br />
+4. Sample [Google Spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc)
 
 5. Sample [html](http://htmlpreview.github.io/?https://github.com/davidayalas/gspreadsheet2array/master/index.html)
 
