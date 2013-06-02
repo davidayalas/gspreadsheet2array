@@ -24,6 +24,20 @@ Google SpreadSheet JSON to 2-dimension Array
 			}
 		}  	
 
-4. Sample [Google Spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc)
+4. Sample [Google Spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc)<br /><br />
 
 5. Sample [html](http://htmlpreview.github.io/?https://github.com/davidayalas/gspreadsheet2array/master/index.html)
+
+6. Sample ranges:
+
+		sheet2array.get(JSON,"A","C"); //only columns between
+		sheet2array.get(JSON,"A10","C20"); //from cell to cell
+		sheet2array.get(JSON,"C"); //from column
+		sheet2array.get(JSON,null,"C"); //to column
+		sheet2array.get(JSON,"C10"); //from cell
+		sheet2array.get(JSON,null,"C10"); //to cell
+		sheet2array.get(JSON,10,20); //only rows between
+		...
+
+
+

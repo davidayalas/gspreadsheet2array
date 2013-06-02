@@ -15,15 +15,27 @@
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="lib/sheet2array.js"></script>
     <script src="https://dl.dropboxusercontent.com/u/17397489/public/sheet2array.js"></script>
+    <script src="lib/sheet2array.js"></script>
     <script>
 
     	$(document).ready(function() {
 		    $.getJSON("https://spreadsheets.google.com/feeds/cells/0Atg3F02p971FdGl2bUZyUkFjc2hvLUU4R05qak40eXc/od6/public/basic?alt=json-in-script&callback=?", null, function(results){
 
+          console.log("Z " + sheet2array.getColNumber("Z"));
+          console.log("AA " + sheet2array.getColNumber("AA"));
+          console.log("AB " + sheet2array.getColNumber("AB"));
+          console.log("AZ " + sheet2array.getColNumber("AZ"));
+          console.log("BA " + sheet2array.getColNumber("BA"));
+          console.log("BZ " + sheet2array.getColNumber("BZ"));
+          console.log("CA " + sheet2array.getColNumber("CA"));
+          console.log("ZZ " + sheet2array.getColNumber("ZZ"));
+          console.log("AAA " + sheet2array.getColNumber("AAA"));
+          console.log("AAZ " + sheet2array.getColNumber("AAZ"));
+          console.log("ABA " + sheet2array.getColNumber("ABA"));
+
           $("<table id='content'></table>").appendTo("body"); 
-          var matrix = sheet2array.get(results);
+          var matrix = sheet2array.get(results,"ab");
           //console.log(matrix)
           for(var i=0;i<matrix.length;i++){
             $("<tr></tr>").appendTo("#content");
