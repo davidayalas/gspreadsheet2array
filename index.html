@@ -35,7 +35,7 @@
           console.log("ABA " + sheet2array.getColNumber("ABA"));
 
           $("<table id='content'></table>").appendTo("body"); 
-          var matrix = sheet2array.get(results,"ab");
+          var matrix = sheet2array.get(results,10,"f30");
           //console.log(matrix)
           for(var i=0;i<matrix.length;i++){
             $("<tr></tr>").appendTo("#content");
